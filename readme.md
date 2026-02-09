@@ -1,6 +1,8 @@
 # Swiss Style Resume Template
 
 A minimalist, typography-focused resume template inspired by **Swiss Design** . This template prioritizes legibility, clean grids, and geometric structure, making it ideal for developers, designers, and engineers who value clarity and precision.
+![cv](./cv.png)
+
 
 ## 🎨 Key Features
 
@@ -21,7 +23,7 @@ A minimalist, typography-focused resume template inspired by **Swiss Design** . 
 ## ⚙️ Configuration
 
 ### Changing the Accent Color
-Find the **Colors** section in the preamble and change the HTML hex code for `swissred`:
+Find the **Colors** section in the preamble and change the HTML hex code for `swis  sred`:
 
 ```latex
 % Change FF3300 to your preferred HEX color
