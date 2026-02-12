@@ -1,0 +1,117 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- PACKAGES ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=1.5cm,right=1.5cm,top=1.25cm,bottom=1.25cm]{geometry}
+\usepackage{helvet}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+% --- PROFESSIONAL SETTINGS ---
+\renewcommand{\familydefault}{\sfdefault}
+\linespread{1.1} 
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% --- COLORS ---
+\definecolor{mainblack}{HTML}{000000}
+\definecolor{darkgray}{HTML}{333333}
+\definecolor{lightgray}{HTML}{555555}
+
+% --- LINK STYLES ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=mainblack,
+    urlcolor=mainblack,
+    pdfborder={0 0 0}
+}
+
+% --- COMMANDS ---
+\newcommand{\cvsection}[1]{
+    \vspace{0.4cm} 
+    \noindent
+    {\color{mainblack}\textbf{\large \MakeUppercase{#1}}}
+    \par
+    \vspace{0.1cm}
+    {\color{mainblack}\hrule height 0.5pt}
+    \vspace{0.2cm} 
+}
+
+\newcommand{\jobtitle}[2]{
+    \noindent
+    \textbf{#1} \hfill {\footnotesize \color{darkgray} #2} \\ 
+}
+
+% --- DOCUMENT ---
+\begin{document}
+
+% --- HEADER ---
+\noindent
+{\fontsize{24}{28}\selectfont \textbf{\MakeUppercase{Alex J. Random}}} \\[0.2cm]
+{\color{darkgray}
+Full Stack Engineer $\cdot$ System Architect \\
+ +1 555 123 4567  $\cdot$ \href{mailto:alex@example.com}{alex@example.com}  $\cdot$ \href{https://example.com}{alex-dev.io} \\
+\href{https://linkedin.com}{/in/randomuser} $\cdot$ \href{https://github.com}{github.com/random} $\cdot$ \href{https://gitlab.com}{gitlab.com/random}
+}
+
+% --- PROFILE ---
+\cvsection{Profile}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+% --- EXPERIENCE ---
+
+\cvsection{Experience}
+
+\jobtitle{MegaCorp Industries}{Jan 2024 - Present}
+\textit{Senior DevOps Engineer} \\
+Leading the migration of legacy monoliths to cloud-native microservices.
+\begin{itemize}[leftmargin=*, label={\small\textbullet}, itemsep=0pt, topsep=2pt]
+    \item \textbf{Infrastructure:} Designed a Kubernetes cluster spanning 3 availability zones using Terraform and Ansible.
+    \item \textbf{Optimization:} Reduced CI/CD pipeline build times by 40\% via aggressive caching strategies.
+    \item \textbf{Monitoring:} Implemented Prometheus and Grafana for full-stack observability and alerting.
+    \item \textbf{Leadership:} Mentored 5 junior developers and conducted code reviews for the backend team.
+\end{itemize}
+
+\jobtitle{StartUp Inc.}{Feb 2021 - Dec 2023}
+\textit{Software Developer} \\
+Developed high-traffic web applications using React and Node.js.
+\begin{itemize}[leftmargin=*, label={\small\textbullet}, itemsep=0pt, topsep=2pt]
+    \item \textbf{Backend:} Built RESTful APIs serving 10k+ concurrent users with 99.9\% uptime.
+    \item \textbf{Database:} Optimized SQL queries resulting in a 50\% reduction in page load latency.
+    \item \textbf{Integration:} Integrated third-party payment gateways (Stripe, PayPal) for seamless checkout.
+\end{itemize}
+
+% --- PROJECTS ---
+\cvsection{Projects}
+
+\jobtitle{Open Source Utility}{2023}
+\textit{Rust, WebAssembly} \\
+A high-performance command-line tool for processing large datasets locally. \\
+\href{https://github.com}{\underline{View Source (GitHub)}}
+\vspace{0.3cm}
+
+% --- SKILLS ---
+\cvsection{Skills}
+\begin{tabular}{@{}ll}
+    \textbf{Languages:} & JavaScript, TypeScript, Python, Go, Rust \\
+    \textbf{Frameworks:} & React, Next.js, Django, FastAPI, Spring Boot \\
+    \textbf{DevOps:} & Docker, Kubernetes, AWS, Azure, Jenkins, GitHub Actions \\
+    \textbf{Databases:} & PostgreSQL, MongoDB, Redis, Elasticsearch
+\end{tabular}
+
+% --- EDUCATION ---
+\cvsection{Education}
+
+\jobtitle{Institute of Technology}{2016 - 2020}
+\textit{Bachelor of Science in Computer Science}
+\begin{itemize}[leftmargin=*, label={\small\textbullet}, itemsep=0pt, topsep=2pt]
+    \item \textbf{Thesis:} Neural Networks for Predictive Text Analysis.
+    \item \textbf{GPA:} 3.8/4.0
+\end{itemize}
+
+\cvsection{References}
+\jobtitle{Available upon request}{}
+\textit{Contact for details}
+
+\end{document}

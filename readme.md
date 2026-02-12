@@ -1,56 +1,82 @@
-# Swiss Style Resume Template
+# minimalist latex cv template
 
-A minimalist, typography-focused resume template inspired by **Swiss Design** . This template prioritizes legibility, clean grids, and geometric structure, making it ideal for developers, designers, and engineers who value clarity and precision.
-![cv](./cv.png)
+a clean, professional, and ats-friendly cv/resume template based on swiss design principles. focused on typography, readability, and ease of editing.
 
+![cv preview](cv.png)
 
-## 🎨 Key Features
+## 🎨 features
 
-* **Swiss Design Principles:** Uses a clean, grid-based layout with the classic **Helvetica** font family.
-* **High Legibility:** Generous whitespace and a strong hierarchy ensure your content is easily scannable.
-* **Smart Commands:** Custom commands like `\cvsection` and `\jobtitle` make adding new entries fast and consistent.
-* **Customizable Accent:** Comes with a signature "Swiss Red" accent color that can be easily changed to match your personal brand.
+* **clean design:** minimalist layout using helvetica/arial for maximum readability.
+* **ats friendly:** single-column layout with standard fonts ensures applicant tracking systems parse it correctly.
+* **easy customization:** centralized color definitions and custom commands for sections.
+* **print ready:** professional margins and black/dark-gray color scheme for clear printing.
 
-## 🚀 How to Use
+## 🚀 quick start
 
-1.  **Open in Overleaf:** Upload `main.tex` to your project.
-2.  **Edit Personal Info:** Update the Header section in `main.tex` with your Name, Email, and Links.
-3.  **Add Content:**
-    * Use `\cvsection{Title}{Content}` to create new main sections.
-    * Use `\jobtitle{Company}{Location | Date}` for work entries.
-    * Use `\itemize` lists with the `[leftmargin=*]` option to keep bullet points aligned.
+### option 1: overleaf (recommended for beginners)
+1.  download this repository as a `.zip` file.
+2.  go to [overleaf](https://www.overleaf.com/).
+3.  click **new project** -> **upload project**.
+4.  upload the zip file and hit **recompile**.
 
-## ⚙️ Configuration
+### option 2: local build
+you need a latex distribution installed (tex live, mactex, or miktex).
 
-### Changing the Accent Color
-Find the **Colors** section in the preamble and change the HTML hex code for `swis  sred`:
+1.  clone the repo:
+
+2.  compile the pdf:
+    ```bash
+    pdflatex main.tex
+    ```
+
+## 🛠️ how to customize
+
+open `cv.tex` in your favorite editor (vs code, texshop, overleaf).
+
+### 1. changing personal info
+navigate to the `% --- header ---` section in the document body.
 
 ```latex
-% Change FF3300 to your preferred HEX color
-\definecolor{swissred}{HTML}{FF3300} 
+\textbf{\MakeUppercase{your name}} \\[0.2cm]
+{\color{darkgray}
+title 1 $\cdot$ title 2 \\
++1 555 123 4567 $\cdot$ \href{mailto:email@example.com}{email@example.com}
+}
 
 ```
 
-### Changing Fonts
+### 2. adding experience
 
-The template uses `helvet` (Helvetica) by default. To use a different sans-serif font, simply change the package:
+use the custom `\jobtitle` command followed by the description.
 
 ```latex
-\usepackage{helvet}   % Default
-% \usepackage{lato}   % Alternative
-% \usepackage{roboto} % Alternative
+\jobtitle{company name}{date range}
+\textit{job title} \\
+description of your role...
 
 ```
 
-### Enabling Page Numbers
+### 3. changing colors
 
-Page numbers are hidden by default. If your resume spans multiple pages and you want to show them, find and remove (or comment out) this line in the preamble:
+find the `% --- colors ---` section at the top of the file. you can use standard html hex codes.
 
 ```latex
-\pagestyle{empty} % Comment this out to show page numbers
+\definecolor{mainblack}{HTML}{000000} % main text
+\definecolor{darkgray}{HTML}{333333}  % subtitles & metadata
+\definecolor{lightgray}{HTML}{555555} % lighter accents
 
 ```
 
-## 📄 License
+### 4. adjusting margins
 
-This template is free to use for personal and commercial resumes. Attribution is appreciated but not required.
+if you need more space, adjust the geometry package settings:
+
+```latex
+\usepackage[left=1.5cm,right=1.5cm,top=1.25cm,bottom=1.25cm]{geometry}
+
+```
+
+## 📄 license
+
+this project is open source and available under the mit license.
+feel free to use it for your own cv!
